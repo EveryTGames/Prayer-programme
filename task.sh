@@ -62,7 +62,7 @@ theintegerpart=$(awk -F '[.]' '{print $1}' <<< $wow)
 
 thedecimelpart=$(awk -F '[.]' '{print "0."$2}' <<< $wow)
 
-time=$(awk -F '[ ]' '{print "the remainguing time for next prayer is " $1 " hours and " $NF * 60 " minutes" }' <<< "$theintegerpart $thedecimelpart")
+time=$(awk -F '[ ]' '{print "the remaining time for next prayer is " $1 " hours and " $NF * 60 " minutes" }' <<< "$theintegerpart $thedecimelpart")
 
 echo "--------------------------------------------------------------------------------"
 echo "warning this programme needs internet connection and will be displaying  the last updated data and the accuracy is not perfect as it depands on the geographic location"
